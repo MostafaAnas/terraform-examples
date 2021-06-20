@@ -144,3 +144,8 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
         environment = "Terraform Demo"
     }
 }
+
+output "public_ip_id" {
+  description = "id of the public ip address provisoned."
+  value       = azurerm_public_ip.myterraformpublicip.ip_address
+}
